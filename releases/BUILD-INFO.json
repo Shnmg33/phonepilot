@@ -1,0 +1,25 @@
+{
+  "version": "0.2.0",
+  "build_type": "debug",
+  "package": "com.phonepilot.bridge",
+  "min_android": "11 (API 30)",
+  "target_sdk": 35,
+  "apk_file": "phonepilot-0.2.0-debug.apk",
+  "apk_bytes": 56179,
+  "apk_sha256": "0e080c3424891ead2a7feaaf14eee7ebd69a02ac0b46a7888947a639a24916f5",
+  "signer_certificate_sha256": "ecb24c42c73d7addfc5b34e51e7df97d7a79009bb4e2889b9ac1c258e2c23e7a",
+  "signature_verified": "APK v2",
+  "zipalign_verified": true,
+  "lint": {
+    "Warning": 5
+  },
+  "build_tools": {
+    "jdk": "17",
+    "gradle": "8.11.1",
+    "android_gradle_plugin": "8.9.2",
+    "android_build_tools": "35.0.0"
+  },
+  "android_source_sha256": "53aded2bf86ee0f48c72d8e0081447cbb04026e6bfcd9b3e91f97c8b4fd5eea7",
+  "physical_device_tested": false,
+  "build_date": "2026-10-19"
+}

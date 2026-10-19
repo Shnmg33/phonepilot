@@ -1,0 +1,18 @@
+[Unit]
+Description=PhonePilot AI phone control server
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=phonepilot
+WorkingDirectory=/opt/phonepilot
+ExecStart=/opt/phonepilot/.venv/bin/python manage.py run
+Restart=on-failure
+RestartSec=5
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

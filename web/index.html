@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="PhonePilot · 自托管 AI 手机控制台，让每一次操作成为下一次的经验。">
+  <title>PhonePilot · 手机智能体</title>
+  <link rel="icon" href="/static/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="/static/app.js" defer></script>
+</head>
+<body>
+  <aside class="sidebar">
+    <a class="brand" href="#overview"><span class="brand-icon">P<span>↗</span></span><span>PhonePilot<small>让操作成为经验</small></span></a>
+    <div class="workspace"><span class="workspace-icon">⌘</span><div>个人工作空间<small>SELF-HOSTED</small></div><span class="tiny-dot"></span></div>
+    <div class="nav-label">工作空间</div>
+    <nav aria-label="主导航">
+      <a href="#overview" data-page="overview"><span>◫</span>工作台</a>
+      <a href="#tasks" data-page="tasks"><span>☷</span>任务中心<span id="nav-count" class="nav-count">0</span></a>
+      <a href="#schedules" data-page="schedules"><span>◷</span>定时计划</a>
+      <a href="#skills" data-page="skills"><span>✧</span>技能记忆<span class="new-tag">LEARN</span></a>
+      <a href="#devices" data-page="devices"><span>▯</span>设备连接</a>
+      <a href="#providers" data-page="providers"><span>⚙</span>模型配置</a>
+    </nav>
+    <div class="sidebar-note"><span>✦</span><strong>每一次探索，都有所积累。</strong><p>观察 → 行动 → 总结 → 复用<br>让你的手机智能体持续成长。</p></div>
+    <div class="sidebar-bottom"><span class="avatar">你</span><div>管理员<small>私有控制台</small></div><button class="icon-btn" id="logout" title="退出登录" aria-label="退出登录">↪</button></div>
+  </aside>
+  <div class="main-shell">
+    <header class="topbar"><div><span class="breadcrumb">工作空间</span><span class="slash">/</span><span id="breadcrumb-page">工作台</span></div><div class="topbar-right"><span class="connection" id="connection"><i></i>等待连接</span><span class="divider"></span><span id="clock"></span></div></header>
+    <main id="main"></main>
+    <footer>PhonePilot <span>·</span> 私有部署，经验由你掌握 <span class="footer-right">观察 / 行动 / 进化</span></footer>
+  </div>
+  <dialog id="login" aria-labelledby="login-title">
+    <div class="login-mark">P↗</div><p class="eyebrow">WELCOME TO PHONEPILOT</p><h2 id="login-title">连接你的智能工作空间</h2><p class="muted">输入服务器的管理员令牌，管理设备与任务。</p>
+    <form id="login-form"><label>管理员令牌<input name="token" type="password" autocomplete="current-password" placeholder="ADMIN_TOKEN" required minlength="24"></label><p id="login-error" class="error-text" role="alert"></p><button class="primary full" type="submit">进入控制台 <span>→</span></button></form>
+    <p class="login-help">首次使用？在服务器配置 <code>.env</code> 并启动服务。<br>模型密钥保留在服务器，不在浏览器中输入。</p>
+  </dialog>
+  <dialog id="modal" aria-labelledby="modal-title"><div class="modal-head"><h2 id="modal-title"></h2><button id="close-modal" class="icon-btn" aria-label="关闭">×</button></div><div id="modal-body"></div></dialog>
+  <div id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

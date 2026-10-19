@@ -1,0 +1,10 @@
+.env
+.git
+.venv
+data
+__pycache__
+tests
+bridge
+android
+.github
+*.zip
